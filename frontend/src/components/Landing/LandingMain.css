@@ -1,0 +1,228 @@
+.landing-main {
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  margin-top: 70px;
+  gap: 20px;
+}
+
+.main-left {
+  width: 40%;
+}
+
+.nav-item-label {
+  background-color: #3e4747;
+  padding: 2px 30px;
+  border-radius: 50px;
+  color: #f1f2f6;
+  font-size: 0.8rem;
+  border: 0.1px solid rgba(255, 255, 255, 0.121);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.headline {
+  margin-top: 40px;
+  width: 400px;
+  font-size: 3rem;
+  color: #f1f2f6;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.headline-highlight {
+  color: #b7ff03;
+}
+
+.description {
+  color: #5f6666;
+  font-size: 0.75rem;
+  width: 400px;
+  margin-top: 10px;
+  line-height: 19px;
+}
+
+.feature-text {
+  color: #f1f2f6;
+  text-decoration: underline;
+}
+
+.cta-button-container {
+  margin-top: 40px;
+  padding: 5px 20px;
+  background: linear-gradient(to right, #3e4747, #102226, #3e4747);
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 0.1px solid rgba(255, 255, 255, 0.079);
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+.cta-btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta-btn {
+  --primary-color: #f1f2f696;
+  --hovered-color: #ffffff;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.cta-btn p {
+  margin: 0;
+  position: relative;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.cta-btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.cta-btn p::before {
+  position: absolute;
+  content: "Discover";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.cta-btn:hover p::before {
+  width: 100%;
+}
+
+.cta-btn:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.cta-btn svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+.main-right {
+  width: 60%;
+  height: 400px;
+  position: relative;
+}
+
+.main-visual {
+  position: absolute;
+  overflow: hidden;
+  z-index: -88;
+  width: 810px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-carousel {
+  margin-top: 50px;
+}
+
+.carousel-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.carousel-controls button {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #a0a0a035;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  border: 1px solid #c9c9c9a7;
+  transition: border 0.2s ease;
+}
+
+.carousel-controls button .fa-chevron-left,
+.carousel-controls button .fa-chevron-right {
+  color: #f1f2f67e;
+}
+
+.testimonial-list {
+  display: flex;
+  padding: 0px 10px;
+  gap: 10px;
+  margin: 20px auto;
+  width: 800px;
+  transform: translateX(0px);
+}
+
+.testimonial-item {
+  width: 250px;
+  height: 180px;
+  background-color: rgba(255, 255, 255, 0.122);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 10px;
+
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-avatar {
+  border-radius: 50%;
+}
+
+.testimonial-user p {
+  color: #f1f2f6;
+  font-size: 0.75rem;
+}
+
+.testimonial-rating {
+  margin-top: 10px;
+}
+
+.testimonial-comment {
+  margin-top: 20px;
+  height: 60px;
+  color: #f1f2f6;
+  font-size: 0.7rem;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.073);
+  font-style: italic;
+}

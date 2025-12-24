@@ -6,7 +6,7 @@ export default function InputField({
   icon,
   placeholder,
 }: {
-  type: "text" | "password";
+  type: "text" | "password" | "email";
   icon: "user" | "mail" | "lock";
   placeholder: string;
 }) {
@@ -24,7 +24,7 @@ export default function InputField({
         duration: 0.5,
         delay: 0.2,
       }}
-      className="relative group mt-10  w"
+      className="relative group mt-8  w"
     >
       <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#102226] transition-colors duration-300">
         {icon === "user" ? (

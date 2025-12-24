@@ -5,7 +5,7 @@ import LandingHeroClipPath from "../components/ui/LandingHeroClipPath";
 
 export default function LandingLayout() {
   return (
-    <>
+    <div className="flex flex-col justify-between min-h-screen p-3 ">
       <LandingHeroClipPath />
 
       <section className="landing-hero">
@@ -15,6 +15,6 @@ export default function LandingLayout() {
       </section>
 
       <LandingFooter />
-    </>
+    </div>
   );
 }

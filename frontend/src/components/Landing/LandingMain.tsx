@@ -17,7 +17,7 @@ export default function LandingMain() {
         <div className="main-left">
           <span className="nav-item-label">Application</span>
           <h1 className="headline">
-            Personal <span className="headline-highlight">Finance </span>{" "}
+            Personal <span className="headline-highlight font-medium">Finance </span>{" "}
             Tracking Tool
           </h1>
           <p className="description">

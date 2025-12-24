@@ -13,8 +13,8 @@ export default function LandingFooter() {
               alt="User Profile"
               className="testimonial-avatar"
               loading="lazy"
-              width={40}
-              height={60}
+              width={60}
+              height={40}
             />
             <div className="testimonial-content">
               <p className="testimonial-name">Jane Doe</p>

@@ -50,7 +50,7 @@ export function TestimonialCarousel({
         <p className="user-name">{name}</p>
       </div>
 
-      <div className="testimonial-rating">
+      <div className="testimonial-rating flex">
         {stars.map((type, index) => (
           <SimpleStar key={index} type={type} size={12} color="#b7ff03" />
         ))}

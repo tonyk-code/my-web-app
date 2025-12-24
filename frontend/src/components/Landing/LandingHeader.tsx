@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./LandingHeader.css";
 
 export default function LandingHeader() {
@@ -16,7 +17,9 @@ export default function LandingHeader() {
             </button>
           </div>
           <div className="nav-right">
-            <button className="login-btn">Login</button>
+            <Link to = "/login">
+              <button className="login-btn">Login</button>
+            </Link>
           </div>
         </nav>
       </header>

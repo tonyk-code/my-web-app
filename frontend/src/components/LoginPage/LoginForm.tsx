@@ -7,7 +7,7 @@ import AnimatedLogo from "../ui/AnimatedLogo";
 export default function LoginForm() {
   return (
     <div className="py-5 px-20 flex flex-col text-center rounded-tl-4xl rounded-tr-4xl bg-white md:rounded-tr-none md:rounded-tl-[60px] md:rounded-bl-[60px] md:h-screen md:w-[50%] ">
-      <AnimatedLogo />
+      <AnimatedLogo className=""/>
 
       <h2 className="my-2 text-[#102226] font-medium text-2xl">Welcome Back</h2>
       <p className="text-[#102226b6]">Track your finances with clarity</p>

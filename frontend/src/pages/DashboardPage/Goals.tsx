@@ -1,3 +1,4 @@
+import GoalInsightsCard from "../../components/Goals/GoalInsightsCard";
 import GoalsHeader from "../../components/Goals/GoalsHeader";
 import SavingsGoalCard from "../../components/Goals/SavingsGoalCard";
 
@@ -48,6 +49,8 @@ export default function Goals() {
           );
         })}
       </div>
+
+      <GoalInsightsCard goals={goals}/>
     </div>
   );
 }

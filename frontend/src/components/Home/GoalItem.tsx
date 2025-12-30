@@ -17,7 +17,7 @@ export default function GoalItem({
       <p className="text-gray-400">${target.toLocaleString()}</p>
       <p className="text-gray-400">${current.toLocaleString()}</p>
 
-      <div className="w-full h-3 bg-black/5 rounded-full overflow-hidden">
+      <div className="w-full h-2 bg-black/5 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${progress}%` }}

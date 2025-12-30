@@ -10,6 +10,7 @@ import type {
 } from "../../types/Types";
 import { useState } from "react";
 import { mockExpenses } from "../../data/expenses";
+import AddExpenseModal from "../../components/Expenses/AddExpenseModal";
 
 const categories: CategoriesType[] = [
   { id: "all", label: "All" },
@@ -24,6 +25,7 @@ const categories: CategoriesType[] = [
 export default function Expenses() {
   const [activeCategory, setActiveCategory] = useState<ExpenseCategory>("all");
   const [view, setView] = useState<ViewMode>("list");
+  const [isAddExpenseOpen, setIsAddExpenseOpen] = useState(false);
 
   const filtered: Expense[] = mockExpenses.filter((expense) => {
     if (activeCategory === "all") {
@@ -37,7 +39,7 @@ export default function Expenses() {
 
   return (
     <div className=" w-full h-screen flex flex-col gap-8">
-      <ExpensesHeader />
+      <ExpensesHeader onClick={() => setIsAddExpenseOpen(true)} />
       <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:justify-between sm:items-center">
         <CategoryFilters
           categories={categories}
@@ -58,6 +60,13 @@ export default function Expenses() {
           <ExpenseItem expense={expense} i={i} />
         ))}
       </div>
+
+      {isAddExpenseOpen && (
+        <AddExpenseModal
+          isOpen={isAddExpenseOpen}
+          onClose={() => setIsAddExpenseOpen(false)}
+        />
+      )}
     </div>
   );
 }

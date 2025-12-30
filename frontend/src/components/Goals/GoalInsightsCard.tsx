@@ -5,7 +5,6 @@ interface Goal {
   name: string;
   current: number;
   target: number;
-  color: string;
 }
 
 export default function GoalInsightsCard({ goals }: { goals: Goal[] }) {

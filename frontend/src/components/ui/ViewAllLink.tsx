@@ -14,7 +14,7 @@ export default function ViewAllLink({
   return (
     <Link
       to={to}
-      className={`flex items-center gap-1 w-17 text-xs font-medium text-[#99a1af] hover:text-white/80 hover:gap-2 transition-all absolute top-3 right-3 ${className}`}
+      className={`flex items-center gap-1 w-17 text-xs font-medium  hover:gap-2 transition-all absolute top-3 right-3 ${className}`}
     >
       {label}
       <span className="text-sm">→</span>

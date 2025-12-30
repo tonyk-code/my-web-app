@@ -1,8 +1,9 @@
 import ExpenseDoughnutChart from "../../components/Home/Graphs/ExpenseDoughnutChart";
 import IncomeLineChart from "../../components/Home/Graphs/IncomeLineChart";
 import StatCard from "../../components/Home/StatCard";
-import TransactionItem from "../../components/Home/TransactionItem";
+import GoalItem from "../../components/Home/GoalItem";
 import { motion } from "framer-motion";
+import { goals } from "../../data/goals";
 import ViewAllLink from "../../components/ui/ViewAllLink";
 
 export default function Home() {
@@ -48,7 +49,10 @@ export default function Home() {
         </div>
 
         <div className="relative rounded-2xl h-150 flex justify-center items-center flex-col gap-6">
-          <ViewAllLink to="/dashboard/expenses"/>
+          <ViewAllLink
+            to="/dashboard/expenses"
+            className="text-[#99a1af] hover:text-white/80"
+          />
           <h3 className="text-3xl font-bold text-white">Expenses</h3>
           <ExpenseDoughnutChart />
         </div>
@@ -71,41 +75,37 @@ export default function Home() {
           }}
           className="bg-white rounded-2xl col-span-1  md:col-span-2 p-4"
         >
-          <h2 className="text-xl text-gray-700 pb-4 font-semibold ">
-            Recent Transaction
-          </h2>
+          <div className="flex justify-between items-center relative">
+            <h2 className="text-xl text-gray-700 pb-4 font-semibold ">
+              Goal Overview
+            </h2>
+
+            <ViewAllLink
+              to="/dashboard/goals"
+              className="text-[#99a1af] hover:text-black/60"
+            />
+          </div>
           <div className="grid grid-cols-4 gap-[5vw] font-semibold text-gray-400 text-sm tracking-wider pb-4 border-b border-gray-100">
-            <span>Title</span>
-            <span>Date</span>
-            <span>Amount</span>
-            <span>Status</span>
+            <span>Goal</span>
+            <span>Target</span>
+            <span>Saved</span>
+            <span>Progress</span>
           </div>
 
           <div>
-            <TransactionItem
-              title="Netflix Subscription"
-              date="Oct 24, 2025, 09:15"
-              amount={15.99}
-              status="recurring"
-            />
-            <TransactionItem
-              title="Freelance Payment"
-              date="Oct 22, 2025, 14:20"
-              amount={850.0}
-              status="completed"
-            />
-            <TransactionItem
-              title="Apple Store"
-              date="Oct 20, 2025, 18:45"
-              amount={15.99}
-              status="pending"
-            />
-            <TransactionItem
-              title="Grocery Store"
-              date="Apr 29, 2022, 11:37"
-              amount={1299.0}
-              status="completed"
-            />
+            {goals.slice(0, 4).map((goal) => {
+              const progress = (goal.current / goal.target) * 100;
+
+              return (
+                <GoalItem
+                  key={goal.id}
+                  name={goal.name}
+                  target={goal.target}
+                  current={goal.current}
+                  progress={progress}
+                />
+              );
+            })}
           </div>
         </motion.div>
       </div>

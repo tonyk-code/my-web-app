@@ -1,37 +1,11 @@
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { useMemo } from "react";
-import { mockExpenses } from "../../../data/expenses";
+import useExpenseTotals from "../../../types/useExpenseTotals";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function ExpenseDoughnutChart() {
-  const doughData = useMemo(() => {
-    const totals = {
-      food: 0,
-      housing: 0,
-      transport: 0,
-      entertainment: 0,
-      shopping: 0,
-      others: 0,
-      total: 0,
-    };
-
-    mockExpenses.forEach((expense) => {
-      const amount = expense.amount;
-      const cat = expense.category.toLowerCase();
-
-      if (Object.hasOwn(totals, cat)) {
-        totals[cat as keyof typeof totals] += amount;
-      } else {
-        totals.others += amount;
-      }
-      totals.total += amount;
-    });
-
-    return totals;
-  }, []);
-
+  const doughData = useExpenseTotals();
   const options = {
     cutout: "70%", // Makes the ring thin and modern
     borderRadius: 5,

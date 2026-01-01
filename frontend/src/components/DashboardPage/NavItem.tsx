@@ -69,8 +69,8 @@ export default function NavItem({
             end={link.path === "/dashboard"}
             className={({ isActive }) =>
               isActive
-                ? "rounded-xl px-2 py-3 flex gap-4 text-sm font-bold shadow-xl shadow-[#b7ff03]/20 text-[#102226] bg-[#b7ff03] translate-x-1"
-                : "rounded-xl px-2 py-3 flex gap-4 text-sm font-bold text-white/50 hover:bg-white/10 hover:translate-x-1 hover:transition"
+                ? "rounded-xl px-2 py-3 flex gap-4 text-sm font-bold shadow-xl shadow-[#b7ff03]/20 text-[#102226] bg-[#b7ff03] translate-x-1 transition-all"
+                : "rounded-xl px-2 py-3 flex gap-4 text-sm font-bold text-white/50 hover:bg-white/10 hover:translate-x-1 hover:transition transition-all"
             }
             onClick={handleClick}
           >
